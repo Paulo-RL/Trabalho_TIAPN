@@ -45,15 +45,23 @@
                                 <img src="/imagens/imagem logo.png"  id="imagemLogo" alt="logo da pagina">
                                 <p class="Welcome mt-3">Bem vindo à nossa loja!</p>
                             </div>
+                            <div class="navb">
+                                <div class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un2">
+
+                                </div>
+                            </div>
                             <div class="col-6 col-6 loginCadastro">
                                 <div class="container-fluid">
-                                    <button class="navbar-toggler" type="button" id="butNav" data-bs-toggle="collapse" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                                    <button class="navbar-toggler" type="button" id="butNav" data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                        aria-label="Toggle navigation" style="filter: invert();">
                                         <span class="navbar-toggler-icon"></span>
-                                    </button>
+                                      </button>
                                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                                         <div class="offcanvas-header">
-                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                        </div>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                              aria-label="Close"></button>
+                                          </div>
                                         <div class="offcanvas-body">
                                             <div class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un">
 
@@ -62,7 +70,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4 col-sm-3" id="carPesq">
+                            <div class="col-12 col-lg-4 col-md-8" id="carPesq">
                                 <form class="d-flex" action="/pesquisa/Search.html" role="search" onchange="pes()">
                                     <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
                                     <button class="btn btn-outline-danger" type="submit" onclick="pes()" id="searchButton">Buscar</button>

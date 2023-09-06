@@ -112,6 +112,29 @@
 .hidden {
     display: none;
   }  
+button.nav-link {
+    color: black;
+    margin-right: 0.95em;
+}
+button.nav-link:hover{
+    color: orangered;
+}
+
+#un{
+    display: flex;
+    flex-direction: column;
+}
+#butNav{
+    display: none;
+}
+#un2{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    font-size: large;
+}
 @media screen and (min-width: 2000px) {
     .IEML{
         font-size: xx-large;
@@ -173,8 +196,11 @@
     .SP{
         font-size: larger;
     }
+    #un2{
+        font-size: small;
+    }
   }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     #cl{
         width: 3vw;
     }
@@ -183,6 +209,12 @@
     }
     .NP,.TlP,.EP,.SP{
         font-size: medium;
+    }
+    .navb{
+        display: none;
+    }
+    #butNav{
+        display: block;
     }
   }
 @media screen and (max-width: 500px) {
@@ -239,16 +271,3 @@
         height: 17vh;
     }
   }
-
-button.nav-link {
-    color: black;
-    margin-right: 0.95em;
-}
-button.nav-link:hover{
-    color: orangered;
-}
-
-#un{
-    display: flex;
-    flex-direction: row;
-}

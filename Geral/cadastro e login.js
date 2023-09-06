@@ -190,6 +190,19 @@ function displayErrorMessage(message) {
 
 function ADM() {
   const UN = document.getElementById('un');
+  const UN2 = document.getElementById('un2');
+  UN2.innerHTML = `
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="ll()">Limpar lista</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="CP()">CSS pesquisa</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenPerf()">Perfil</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="LOUT()">Logout</button>`;
   UN.innerHTML = `
     <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
   
@@ -254,7 +267,11 @@ function LOUT() {
   location.reload()
   }
   const UN = document.getElementById('un');
+  const UN2 = document.getElementById('un2');
   Login = false;
+  UN2.innerHTML = `
+    <button type="button" class="nav-link botaoLogCad" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
+    <button type="button" class="nav-link botaoLogCad" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>`;
   UN.innerHTML = `
     <button type="button" class="nav-link botaoLogCad" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
     <button type="button" class="nav-link botaoLogCad" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>`;
@@ -324,21 +341,30 @@ function formatarNumero(number) {
 
 function LO() {
   const UN = document.getElementById('un');
+  const UN2 = document.getElementById('un2');
   var logIndex= JSON.parse(localStorage.getItem('LoggedInUser'))
   logIndex=logIndex.index
   if (Login && logIndex!=1) {
-    UN.innerHTML = `<li class="nav-item">
+    UN2.innerHTML = `
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenPerf()">Perfil</button>
+  
+    <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="LOUT()">Logout</button>`;
+    UN.innerHTML = `
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
-    </li>
-    <li class="nav-item">
+
+    
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>
-    </li>
-    <li class="nav-item">
+
+    
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenPerf()">Perfil</button>
-    </li>
-    <li class="nav-item">
+
+    
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="LOUT()">Logout</button>
-    </li>`;
+`;
     perfil(Login);
     var userStatus=JSON.parse(localStorage.getItem('LoggedInUser'))
     userStatus = userStatus.status;
@@ -350,16 +376,20 @@ function LO() {
     document.getElementById('IP').src = "/imagens/perfiljpg.jpg";
     OpenBox();
   } else {
-    UN.innerHTML = `<li class="nav-item">
+    UN.innerHTML = `
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
-    </li>
-    <li class="nav-item">
+
+    
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>
-    </li>`;
+`;
+    UN2.innerHTML = `
+      <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenCad()">Cadastro</button>
+
+    
+      <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>
+`;
   }
 }
-
-
 /* const Delete = 0;
 if (Delete >= 0 && Delete < userList.length) {
   userList.splice(Delete, 1);

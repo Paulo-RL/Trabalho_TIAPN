@@ -32,7 +32,7 @@
   <div class="Fundopng">
 
   </div>
-  <header class="Pager1">
+  <!-- <header class="Pager1">
     <div class="container-fluid">
       <div class="row">
         <div class="col-2 col-2">
@@ -86,7 +86,6 @@
                 </div>
               </nav>
             </div>
-            <div id="tes" value="2"></div>
             <div class="row">
               <div class="col-10">
                 <div class="PS">
@@ -116,7 +115,69 @@
 
       </div>
     </div>
-  </header>
+  </header> Backup-->
+  <header class="Pager1">
+    <div class="container-fluid">
+            <div class="row mt-2">
+                <nav class="navbar bg-body-dark">
+                    <div class="container-fluid">
+                        <div class="col-2 col-2">
+                            <img src="/imagens/imagem logo.png"  id="imagemLogo" alt="logo da pagina">
+                            <p class="Welcome mt-3">Bem vindo à nossa loja!</p>
+                        </div>
+                        <div class="navb">
+                            <div class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un2">
+
+                            </div>
+                        </div>
+                        <div class="col-6 col-6 loginCadastro">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" id="butNav" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                    aria-label="Toggle navigation" style="filter: invert();">
+                                    <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="offcanvas-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                          aria-label="Close"></button>
+                                      </div>
+                                    <div class="offcanvas-body">
+                                        <div class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4 col-md-8" id="carPesq">
+                            <form class="d-flex" action="/pesquisa/Search.html" role="search" onchange="pes()">
+                                <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
+                                <button class="btn btn-outline-danger" type="submit" onclick="pes()" id="searchButton">Buscar</button>
+                            </form>
+                            <div class="contCAR">
+                                <div class="">
+                                    <img src="img/icons8-shopping-cart-96.png" id="carrinho" onclick="togCar()" alt="">
+                                </div>
+                                <div class="CC" id="CC">
+                                    <img src="/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+                                    <div class="CarinCont" id="CarinCont">
+
+                                    </div>
+                                    <div class="CartFooter">
+                                        <p class="PF" id="PrecoFinal"></p>
+                                        <div class="OI" id="OutrosItens">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+    </div>
+</header>
   <main>
     <div class="container-fluid">
       <div class="row bg-dark fitc">
