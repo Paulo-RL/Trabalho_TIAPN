@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Otaku</title>
+  <link rel="icon" type="image/png" href="/imagens/imagem logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./bib.css">
+  <link rel="stylesheet" href="/Geral/carin.css">
+  <link rel="stylesheet" href="/Geral/headers and pagers.css">
+  <link rel="stylesheet" href="/Geral/cadastro e login.css">
+  <script src="./bib.js"></script>
+  <script src="/Geral/carin.js"></script>
+  <script src="/Geral/cadastro e login.js"></script>
+</head>
+
+<body onload="loadCard();pageLoad();LO()">
+  <div class="LCC" id="LCC">
+    <div class="LogCad" id="LC">
+
+    </div>
+  </div>
+  <div class="perfil" id="perfil">
+        
+  </div>
+  <div class="Fundopng">
+
+  </div>
+  <header class="Pager1">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 col-2">
+          <img src="/imagens/imagem logo.png"  id="imagemLogo" alt="logo da pagina">
+          <p class="Welcome mt-3">Bem vindo à nossa loja!</p>
+      </div>
+
+        <div class="col-9 col-lg-4 col-md-10">
+          <div class="row">
+            <nav class="navbar">
+              <div class="container-fluid">
+                <form class="d-flex" action="/pesquisa/Search.html" role="search"
+                  onchange="pes()">
+                  <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
+                  <button class="btn btn-outline-danger" type="submit" onclick="pes()" id="searchButton">Search</button>
+                </form>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <div class="col-12  col-lg-7 col-md-12 justify-content-end">
+          <div class="row">
+            <div class="col">
+              <nav class="navbar">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" id="butNav" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation" style="background-color: whitesmoke;">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un">
+                        <li class="nav-item">
+                          <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close"
+                            onclick="OpenCad()">Cadastro</button>
+                        </li>
+                        <li class="nav-item">
+                          <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close"
+                            onclick="OpenLog()">Login</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+            <div id="tes" value="2"></div>
+            <div class="row">
+              <div class="col-10">
+                <div class="PS">
+                  <p>Pagamento na entrega | Devolução em 30 dias</p>
+                  <p>Suporte 24/7 | Contato: 0800-31-1234</p>
+                </div>
+              </div>
+              <div class="contCAR">
+                <div class="top-right">
+                  <img src="/imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
+                  <p class="carText" onclick="togCar()">Meu Carrinho</p>
+                </div>
+                <div class="CC" id="CC">
+                  <img src="/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+                  <div class="CarinCont" id="CarinCont"></div>
+                  <div class="CartFooter">
+                    <p class="PF" id="PrecoFinal"></p>
+                    <div class="OI" id="OutrosItens"></div>
+                  </div>
+                </div>
+              </div>              
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container-fluid">
+      <div class="row bg-dark fitc">
+        <div class="col-12">
+          <div class="text-center text-light pt-2" style="font-size: 100%;" id="fl">Filtrar</div>
+          <div class="Filtro">
+            <div id="filters" class="filter-container">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row bg-dark">
+        <button type="button" class="btn btn-outline-danger btn-sm mb-3 col-12" onclick="filtro()" id="fb">Filtrar</button>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-12" id="CardsCont">
+
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

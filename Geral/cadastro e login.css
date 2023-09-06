@@ -1,0 +1,254 @@
+.LCC{
+    position: fixed;
+    z-index: 500;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.479);
+    visibility: hidden;
+}
+.LCC.active{
+    visibility: visible;
+}
+#cl{
+    position: fixed;
+    width: 2vw;
+}
+.LogCad{
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    background-color: white;
+    width: calc(25vw + 100px);
+    height: calc(25% * 3);
+}
+.LCT{
+    align-self: center;
+    text-align: center;
+    font-size: calc(1rem + 0.9vw);
+}
+.FLC{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.IEM, .IPS, .INM, .ITL{
+    align-self:center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.IEML, .IPSL{
+    align-self:center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.perfil{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 400;
+    width: 100vw;
+    height: 100vh;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(110, 110, 110);
+    visibility: hidden;
+}
+
+.perfil.active{
+    visibility: visible;
+}
+
+.perfilInfo{
+    align-self: center;
+    background-color: whitesmoke;
+    margin-top: 2%;
+    width: 80%;
+    height: 90%;
+    align-self: center;
+    display: grid;
+    grid-template-areas: ". . . TP . . ."
+    ". . . IP . . ."
+    "NM . . . Tel . ."
+    "EM . . . ST . .";
+}
+.TP{
+    grid-area: TP;
+    font-size: xx-large;
+}
+
+.NP{
+    grid-area: NM;
+    font-size: x-large;
+}
+.TlP{
+    grid-area: Tel;
+    font-size: x-large;
+}
+.EP{
+    grid-area: EM;
+    font-size: x-large;
+}
+.SP{
+    grid-area: ST;
+    font-size: x-large;
+}
+.IP{
+  grid-area: IP;
+  width: 30vh;
+  height: fit-content;
+  border-radius: 50%;
+}
+.hidden {
+    display: none;
+  }  
+@media screen and (min-width: 2000px) {
+    .IEML{
+        font-size: xx-large;
+    }
+    .IPSL{
+        font-size: xx-large;
+    }
+    .IBL{
+        font-size: xx-large;
+    }
+    .IEM{
+        font-size: xx-large;
+    }
+    .ITL{
+        font-size: xx-large;
+    }
+    .INM{
+        font-size: xx-large;
+    }
+    .IPS{
+        font-size: xx-large;
+    }
+    .IBC{
+        font-size: xx-large;
+    }
+    .TP{
+        font-size: 4rem;
+    }
+    
+    .NP{
+        font-size: 3rem;
+    }
+    .TlP{
+        font-size: 3rem;
+    }
+    .EP{
+        font-size: 3rem;
+    }
+    .SP{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 1300px) {
+    #cl{
+        width: 3vw;
+    }
+    .TP{
+        font-size: larger;
+    }
+    .NP{
+        font-size: larger;
+    }
+    .TlP{
+        font-size: larger;
+    }
+    .EP{
+        font-size: larger;
+    }
+    .SP{
+        font-size: larger;
+    }
+  }
+@media screen and (max-width: 800px) {
+    #cl{
+        width: 3vw;
+    }
+    .TP{
+        font-size: larger;
+    }
+    .NP,.TlP,.EP,.SP{
+        font-size: medium;
+    }
+  }
+@media screen and (max-width: 500px) {
+  .LogCad{
+    left: 20%;
+    width: calc(30vw + 130px);
+  }
+  #cl{
+    width: 5vw;
+}
+.TP{
+    position: absolute;
+    font-size: small;
+    width: 100px;
+    left: 38%;
+}
+.NP,.TlP,.EP,.SP{
+    position: relative;
+    font-size: medium;
+    width: 350px;
+    top: 150%;
+}
+.IP{
+    position: absolute;
+    width: fit-content;
+    height: 24vh;
+    left: 35%;
+    top: 15%;
+}
+.SP,.EP{
+    top: 0%;
+}
+.perfilInfo{
+    grid-template-areas: ". . . TP . . ."
+    ". . . IP . . ."
+    ". . . NM . . ."
+    ". . . Tel . . ."
+    ". . . EM . . ."
+    ". . . ST . . .";
+}
+#un{
+    max-width: 50vw;
+}
+}
+@media screen and (max-width: 330px) {
+    .LogCad{
+      left: 16%;
+      width: calc(30vw + 130px);
+    }
+    #cl{
+        width: 7vw;
+    }
+    .IP{
+        height: 17vh;
+    }
+  }
+
+button.nav-link {
+    color: black;
+    margin-right: 0.95em;
+}
+button.nav-link:hover{
+    color: orangered;
+}
+
+#un{
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,239 @@
+/* codigo pro carrinnho em pagina que não pode exceder 100vh */
+.CC {
+  position: absolute;
+  top: 100px;
+  right: 1%;
+  background-color: rgba(0, 255, 255, 0.11);
+  width: 30%;
+  height: 100vh;
+  z-index: 15;
+  display: none;
+}
+
+.CC.active {
+  display: block;
+}
+.clo {
+  height: auto;
+  width: calc(3vw - 2vh);
+  background: rgb(255,255,255);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.CarinCont {
+  position: relative;
+  width: 100%;
+  flex-grow: inherit;
+  display: flex;
+  background-color: rgba(245, 245, 245, 0.8);
+  flex-direction: column;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.caripro {
+  height: 130px;
+  display: grid;
+  grid-template-areas:
+    "imCari ticari ticari"
+    "imCari pecari recari";
+  grid-gap: 5px;
+  border-style: solid;
+}
+
+.ticari {
+  grid-area: ticari;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: calc(1rem + 0.5vw);
+  height: calc(1rem + 0.5vw);
+  line-height: 1;
+  color: black;
+}
+
+.pecari {
+  grid-area: pecari;
+  font-size: calc(1rem + 0.5vw);
+  color: black;
+  position: relative;
+  top: -30%;
+}
+
+.recari {
+  grid-area: recari;
+  max-width: fit-content;
+  max-height: 40px;
+  position: relative;
+  background-color: transparent;
+  border-color: blue;
+  border-width: 0.3rem;
+  color: blue;
+  font-size: 0.7vw;
+}
+
+.recari:hover {
+  background-color: lightblue;
+  border-color: lightblue;
+  color: whitesmoke;
+  border-width: 0.4rem;
+}
+
+.imCari {
+  grid-area: imCari;
+  height: inherit;
+  width: auto;
+}
+
+.CartFooter {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 96%;
+  padding: 10px;
+}
+
+.OI {
+  position: absolute;
+  bottom: 20px;
+  width: inherit;
+  transform: translateX(0%);
+  border-style: solid;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  background-color: white;
+}
+
+.PF {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  font-weight: 800;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gold;
+  color: black;
+}
+
+@media (min-width: 2000px) {
+  .CC {
+    width: 30%;
+  }
+  .caripro{
+    height: 17vh;
+  }
+  .recari {
+    font-size: x-large;
+    padding: 0px;
+  }
+  .ticari {
+    font-size: xx-large;
+  }
+  .CartFooter {
+    width: 96%;
+  }
+  .OI {
+    font-size: larger;
+  }
+  .PF {
+    font-size: x-large;
+    background-color: rgba(245, 245, 245, 0.685);
+  }
+}
+
+@media (max-width: 1500px) {
+  .caripro{
+    height: 15vh;
+  }
+  .recari {
+    font-size: medium;
+  }
+  .ticari {
+    font-size: larger;
+  }
+}
+
+@media (max-width: 1200px) {
+  .recari {
+    font-size: small;
+    height: 24px;
+    border-width: 2px;
+  }
+  .ticari {
+    font-size: small;
+  }
+  .pecari{
+    font-size: small;
+  }
+  .OI{
+    font-size: small;
+    border-width: 2px;
+  }
+  .caripro{
+    border-width: 2px;
+  }
+  .CartFooter{
+    width: 95%;
+  }
+}
+
+@media (max-width: 912px) {
+  .CC {
+    background-color: rgba(3, 85, 85, 0.9);
+  }
+  .recari {
+    font-size: xx-small;
+  }
+  .ticari {
+    font-size: small;
+  }
+  .CartFooter {
+    width: 92%;
+  }
+}
+
+@media (max-width: 540px) {
+  .CC {
+    width: 50%;
+  }
+  .clo{
+    width: 5%;
+  }
+  .CartFooter{
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .CC {
+    width: 90%;
+  }
+}
+@media (max-height: 535px) {
+  .CartFooter {
+    bottom: 15%;
+  }
+}
+
+/* @media (max-height: 435px) {
+  .CartFooter {
+    bottom: 56%;
+  }
+}
+
+@media (max-height: 400px) {
+  .CartFooter {
+    bottom: 66%;
+  }
+}
+
+@media (max-height: 300px) {
+  .CartFooter {
+    bottom: 66%;
+  }
+} */
+  

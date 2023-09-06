@@ -1,0 +1,89 @@
+.card-item {
+  margin-bottom: 20px;
+  min-width: 25%;
+  max-width: 20%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+.fitc {
+  min-height: 200px;
+}
+
+.Filtro {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: start;
+}
+
+@media(min-width:2000px){
+.Filtro{
+display: grid;
+grid-auto-flow: row;
+grid-row-gap: 40px;
+}
+}
+@media(max-width:2000px){
+.Filtro{
+display: grid;
+grid-auto-flow: row;
+grid-row-gap: 30px;
+}
+}
+@media(max-width:1500px){
+.Filtro{
+display: grid;
+grid-auto-flow: row;
+grid-row-gap: 20px;
+}
+}
+@media(max-width:1000px){
+.Filtro{
+display: grid;
+grid-auto-flow: row;
+grid-row-gap: 10px;
+}
+}
+@media (max-width: 912px) {
+.Filtro{
+display: grid;
+grid-auto-flow: row;
+grid-row-gap: 5px;
+}
+}
+@media (min-width: 576px) {
+.Filtro {
+flex-direction: row;
+align-items: flex-start;
+}
+
+#fl {
+order: 1;
+margin-right: auto;
+margin-bottom: 20px;
+}
+
+#fb {
+order: 3;
+}
+
+.filter-container {
+flex-wrap: nowrap;
+}
+}
