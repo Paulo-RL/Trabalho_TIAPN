@@ -69,11 +69,15 @@ function OpenLog2() {
 const userList = JSON.parse(localStorage.getItem('userList')) || [];
 
 if (userList.length === 0) {
-  userList.push({ name: 'Paulo Leite', telephone: '31999999999', email: 'prleitebiot@gmail.com', password: '0000' });
+  userList.push({ name: 'Paulo Leite', telephone: '31999999999', email: 'prleitebiot@gmail.com', password: '0000', status: 1 });
 }
 if (userList.length === 1) {
-  userList.push({ name: '', telephone: '', email: '', password: '' });
+  userList.push({ name: '', telephone: '', email: '', password: '', status: 0});
 }
+if (userList.length === 2) {
+  userList.push({ name: 'Paulo', telephone: '31999999991', email: 'prleitebiot@gmail.com', password: '1111', status: 1 });
+}
+localStorage.setItem('userlist',JSON.stringify(userList))
 
 function getLoggedInUserIndex() {
   var loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
@@ -99,6 +103,7 @@ function CADSAV() {
   const Tel = document.getElementById('ITL').value;
   const Email = document.getElementById('IEM').value;
   const Password = document.getElementById('IPS').value;
+  const status=2;
 
   if (!Name || !Tel || !Email || !Password) {
     displayErrorMessage("Por favor, preencha todos os campos");
@@ -109,7 +114,8 @@ function CADSAV() {
     name: Name,
     telephone: Tel,
     email: Email,
-    password: Password
+    password: Password,
+    status: status
   };
 
   const isDuplicate = userList.some(user => (
@@ -131,6 +137,7 @@ function CADSAV() {
 var userName = '';
 var userTel = '';
 var userEm = '';
+var userSt = 0;
 var Login = false;
 
 function LOG() {
@@ -155,8 +162,9 @@ function LOG() {
   userName = userList[userIndex].name;
   userTel = userList[userIndex].telephone;
   userEm = userList[userIndex].email;
+  userSt= userList[userIndex].status;
   Login = true;
-  localStorage.setItem('LoggedInUser', JSON.stringify({ index: userIndex, name: userName, telephone: userTel, email: userEm }));
+  localStorage.setItem('LoggedInUser', JSON.stringify({ index: userIndex, name: userName, telephone: userTel, email: userEm, status: userSt}));
   localStorage.setItem('CSSPESQ', 'false');
   location.reload()
   LO()
@@ -201,19 +209,25 @@ function ADM() {
 
 function ll() {
   const userList = JSON.parse(localStorage.getItem('userList')) || [];
-  const cartItems = JSON.parse(localStorage.getItem('DE')) || [];
-
-  if (userList.length > 2) {
-    userList.splice(2);
-    localStorage.setItem('userList', JSON.stringify(userList));
-  }
-
-  if (cartItems.length > 2) {
-    cartItems.splice(2);
+    const cartItems = JSON.parse(localStorage.getItem('DE')) || [];
+    var userList2 = userList.filter(user =>user.status === 2);
+    var userList3 = userList.filter(user =>user.status === 0 || user.status === 1);
+    var userList4 = userList.filter(user => user.status === 2 || user.status === 0);
+  
+    if (userList2.length > 0) {
+      userList2 = []
+      const UL = [...userList3, ...userList2];
+      localStorage.setItem('userList', JSON.stringify(UL));
+    }
+    userList4.forEach(user => {
+      const userIndex = userList.indexOf(user);
+      if (userIndex !== -1 && cartItems[userIndex]) {
+        cartItems[userIndex] = [];
+      }
+    });
     localStorage.setItem('DE', JSON.stringify(cartItems));
     localStorage.setItem('LO', JSON.stringify(cartItems));
   }
-}
 
 function CP() {
   var t = localStorage.getItem('CSSPESQ');
@@ -234,7 +248,8 @@ function LOUT() {
   userName = userList[1].name;
   userTel = userList[1].telephone;
   userEm = userList[1].email;
-  localStorage.setItem('LoggedInUser', JSON.stringify({ index: 1, name: userName, telephone: userTel, email: userEm }));
+  var userSt = 0;
+  localStorage.setItem('LoggedInUser', JSON.stringify({ index: 1, name: userName, telephone: userTel, email: userEm, status: userSt }));
   localStorage.setItem('CSSPESQ', 'false');
   location.reload()
   }
@@ -325,8 +340,9 @@ function LO() {
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="LOUT()">Logout</button>
     </li>`;
     perfil(Login);
-    var userIndex = getLoggedInUserIndex();
-    if (userIndex === 0) {
+    var userStatus=JSON.parse(localStorage.getItem('LoggedInUser'))
+    userStatus = userStatus.status;
+    if (userStatus === 1) {
       ADM();
       OpenBox();
       return;
@@ -350,3 +366,8 @@ if (Delete >= 0 && Delete < userList.length) {
 }
 localStorage.setItem('userList', JSON.stringify(userList));
 console.log(userList); *//* Limpador de lista */
+/* if (cartItems.length > 2) {
+    cartItems.splice(2);
+    localStorage.setItem('DE', JSON.stringify(cartItems));
+    localStorage.setItem('LO', JSON.stringify(cartItems));
+  } */

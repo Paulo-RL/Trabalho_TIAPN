@@ -1,0 +1,107 @@
+.card-item {
+  margin-bottom: 20px;
+  min-width: 33%;
+  max-width: 30%;
+}
+
+.row-container:has(.single-card) #CardsCont {
+  width: 100%;
+}
+
+.row-container.single-card {
+  width: 100%;
+}
+
+.row-container.single-card .card-item {
+  min-width: calc(20% + 100px);
+  max-width: 33%;
+}
+
+.border-bottom {
+  border-bottom: 1px solid red;
+}
+
+.Filtro{
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 20px;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+    padding: none;
+    margin: none;
+  }
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@media(min-width:2000px){
+.Filtro{
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 40px;
+  }
+}
+
+@media (max-width: 912px) {
+
+.Filtro{
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 5px;
+  }
+}
+
+#carrinho{
+    height: 4.4em;
+    width: 4rem;
+    display: flex;
+    margin-top: 1em;
+    margin-left: 13em;
+}
+
+
+#carrinho:hover{
+  cursor: pointer;
+  
+}
+
+#carrinho:active {
+  animation: clicado 0.3s ease-in-out;
+}
+
+@keyframes clicado {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+
+#carPesq{
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+#impPT, #searchButton{
+  height: 2.3em;
+}
+
+.loginCadastro{
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  margin-bottom: 5em;
+}
+
+
+

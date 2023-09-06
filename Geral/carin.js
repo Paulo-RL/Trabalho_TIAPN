@@ -72,7 +72,6 @@ async function fetchItemPrices(itemIDs) {
       const item = base.itens.find(item => item.id === parseInt(itemID));
       return item.price;
     });
-    console.log(prices)
     return prices;
   } catch (error) {
     console.error('Error fetching item prices:', error);
