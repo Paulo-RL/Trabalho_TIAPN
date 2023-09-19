@@ -86,22 +86,4 @@ img {
   }
 }
 
-#carPesq{
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-}
-
-#impPT, #searchButton{
-  height: 2.3em;
-}
-
-.loginCadastro{
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 1.2rem;
-  margin-bottom: 5em;
-}
-
-
 

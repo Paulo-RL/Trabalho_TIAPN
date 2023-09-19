@@ -1,0 +1,27 @@
+.Pagamento{
+    background-color: whitesmoke;
+    width: fit-content;
+    height: 300px;
+    position: absolute;
+}
+.FP{
+    display: flex;
+    flex-direction: column;
+}
+.PM{
+    display: flex;
+}
+main{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+header{
+    margin-bottom: 10px;
+}
+
+.selected{
+    background-color: blue;
+    color: gold;
+}

@@ -35,11 +35,11 @@ function OpenCad2() {
             </div>
             <div class="IEM">
                 Email:
-                <input type="email" id="IEM">
+                <input type="email" id="IEML">
             </div>
             <div  class="IPS">
                 Senha:
-                <input type="password" id="IPS">
+                <input type="password" id="IPSL">
             </div>
             <button type="submit" class="IBC">Cadastrar</button>
         </form>
@@ -101,8 +101,8 @@ function getLoggedInUserCart() {
 function CADSAV() {
   const Name = document.getElementById('INM').value;
   const Tel = document.getElementById('ITL').value;
-  const Email = document.getElementById('IEM').value;
-  const Password = document.getElementById('IPS').value;
+  const Email = document.getElementById('IEML').value;
+  const Password = document.getElementById('IPSL').value;
   const status=2;
 
   if (!Name || !Tel || !Email || !Password) {
@@ -131,6 +131,7 @@ function CADSAV() {
   userList.push(userInfo);
   localStorage.setItem('userList', JSON.stringify(userList));
 
+  LOG();
   OpenBox();
 }
 
@@ -240,6 +241,7 @@ function ll() {
     });
     localStorage.setItem('DE', JSON.stringify(cartItems));
     localStorage.setItem('LO', JSON.stringify(cartItems));
+    location.reload()
   }
 
 function CP() {
