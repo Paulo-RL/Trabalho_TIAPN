@@ -1,27 +1,36 @@
-.Pagamento{
+.Pagamento {
     background-color: whitesmoke;
     width: fit-content;
-    height: 300px;
+    height: fit-content;
     position: absolute;
+    border-radius: 26px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
-.FP{
+
+.FP {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
-.PM{
+
+.PM {
     display: flex;
+    justify-content: space-between;
 }
-main{
+
+#CD, #CC, #BT, #PX {
+    margin-left: 10px;
+}
+
+main {
     display: flex;
     width: 100vw;
     height: 100vh;
     justify-content: center;
 }
-header{
-    margin-bottom: 10px;
-}
 
-.selected{
-    background-color: blue;
-    color: gold;
+header {
+    margin-bottom: 10px;
 }
