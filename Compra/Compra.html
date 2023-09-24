@@ -1,63 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento</title>
-    <link rel="icon" type="image/png" href="/imagens/imagem logo.png"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="/imagens/imagem logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/Geral/headers and pagers.css">
     <link rel="stylesheet" href="Compra.css">
 </head>
+
 <body>
     <header class="Pager1">
         <div class="container-fluid">
-                <div class="row mt-2">
-                    <nav class="navbar bg-body-dark">
-                        <div class="container-fluid">
-                            <div class="col-2 col-2">
-                                <a href="/index.html">
-                                    <img src="/imagens/imagem logo.png"  id="imagemLogo" alt="logo da pagina">
-                                </a>
-                            </div>
-                            <div class="navb">
-                                <div class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un2">
+            <div class="row mt-2">
+                <nav class="navbar bg-body-dark">
+                    <div class="container-fluid">
+                        <div class="col-2 col-2">
+                            <a href="/index.html">
+                                <img src="/imagens/imagem logo.png" id="imagemLogo" alt="logo da pagina">
+                            </a>
+                        </div>
+                        <div class="navb">
+                            <div class="navbar-nav justify-content-end flex-grow-1 pe-3" id="un2">
 
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-4 col-md-8" id="carPesq">
-                                <form class="d-flex" action="/pesquisa/Search.html" role="search" onchange="pes()">
-                                    <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
-                                    <button class="btn btn-outline-danger" type="submit" onclick="pes()" id="searchButton">Buscar</button>
-                                </form>
                             </div>
                         </div>
-                    </nav>
-                </div>
+                        <div class="col-12 col-lg-4 col-md-8" id="carPesq">
+                            <form class="d-flex" action="/pesquisa/Search.html" role="search" onchange="pes()">
+                                <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
+                                <button class="btn btn-outline-danger" type="submit" onclick="pes()"
+                                    id="searchButton">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
+        <!--Lado Esquerdo-->
         <div class="Pagamento">
-            <form action="" class="FP">
-            <p>Selecione a forma de pagamento</p>
-            <div class="PM">
-                <input required type="radio" name="FormaPag" value="1" id="CD" onchange="t(1)"><label for="CD">Cartão de debito</label>
-                <input required type="radio" name="FormaPag" value="2" id="CC" onchange="t(2)"><label for="CC">Cartão de credito</label>
-                <input required type="radio" name="FormaPag" value="1" id="BT" onchange="t(3)"><label for="BT">Boleto</label>
-                <input required type="radio" name="FormaPag" value="2" id="PX" onchange="t(4)"><label for="PX">Pix</label>
+            <div class="endereco">
+                <h3>Endereço</h3>
+                <!--Pais-->
+                <input type="text" name="pais" id="" placeholder="País">
+                <!--Nome-->
+                <input type="text" name="nome" id="" placeholder="Nome">
+                <!--Telefone-->
+                <input type="tel" name="telefone" id="" placeholder="Telefone">
+                <!--CEP-->
+                <input type="text" name="cep" id="" placeholder="CEP">
+                <!--Endereço-->
+                <input type="text" name="endereco" id="" placeholder="Endereço">
+                <!--Numero Residencial-->
+                <input type="text" name="numeroresidencia" id="" placeholder="Número Residencial">
+                <!--Complemento-->
+                <input type="text" name="complemento" id="" placeholder="Complemento">
+                <!--Bairro-->
+                <input type="text" name="bairro" id="" placeholder="Bairro">
+                <!--Cidade-->
+                <input type="text" name="cidade" id="" placeholder="Cidade">
+                <!--Estado-->
+                <input type="text" name="estado" id="" placeholder="Estado">
             </div>
-            <input required type="text" autocomplete="on" placeholder="CEP" id="">
-            <input required type="text" placeholder="Endereço (Rua/Número)" id="">
-            <input required type="text" name="" placeholder="Estado" id="">
-            <input required type="text" name="Pais" placeholder="Pais" autocomplete="on" id="">
-            <input required type="tel" name="" placeholder="Telefone" id="">
-            <input type="text" placeholder="Complemento (opcional)" id="">
-            <button type="submit">Salvar</button>
-            </form>
+            <!--Lado Direito-->
+            <div class="ladodireito">
+                <!--Metodos de Pagamento-->
+                <div class="metodopagamento">
+                    <h3>Método de Pagamento</h3>
+                    <!--Cartao Credito-->
+
+                    <img src="/imagens/pagamentocartao.png" alt="" width="50px">
+                    <span>Cartão de Crédito</span>
+                    <input type="radio">
+
+                    <hr color="white" width="100%">
+                    <!--Cartao Debito-->
+
+                    <img src="/imagens/pagamentocartao.png" alt="" width="50px">
+                    <span>Cartão de Débito</span>
+                    <input type="radio" name="" id="">
+
+                    <hr color="white" width="100%">
+                    <!--Pix-->
+
+                    <img src="/imagens/pagamentopix.png" alt="" width="50px">
+                    <span>Pix</span>
+                    <input type="radio" name="" id="">
+
+                    <hr color="white" width="100%">
+                    <!--Boleto-->
+
+                    <img src="/imagens/pagamentoboleto.png" alt="" width="50px">
+                    <span>Boleto</span>
+                    <input type="radio" name="" id="">
+
+                </div>
+
+                <!--Detalhes do Pedido-->
+                <div class="detalhespedido">
+                    <img alt="Imagem Produto" class="ImgP" id="im">
+                    <p class="titulo" id="titl"></p>
+                    <div>
+                        <p class="estrelas" id="Est"></p>
+                    </div>
+                    <p id="count">Votos: indisponivel</p>
+                    <p class="gen" id="gen">Generos: Informação indisponivel</p>
+                    <p class="ye" id="ye">Ano de lançamento: Informação indisponivel</p>
+                    <p id="brand">Informação indisponivel</p>
+                    <p id="preco" alt="Preço">Informação indisponivel</p>
+
+                    <div class="desc">
+                        <p class="description" id="descr" alt="descrição"></p>
+                    </div>
+                    <button>Confirmar Pedido</button>
+                </div>
+            </div>
         </div>
     </main>
+    <script src="/detalhes/detail.js"></script>
+    <script src="/Geral/carin.js"></script>
+    <script src="/Geral/cadastro e login.js"></script>
     <script src="Compra.js"></script>
 </body>
+
 </html>

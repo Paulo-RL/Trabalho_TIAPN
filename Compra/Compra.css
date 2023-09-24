@@ -1,36 +1,57 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
 .Pagamento {
-    background-color: whitesmoke;
-    width: fit-content;
-    height: fit-content;
+    width: 90%;
     position: absolute;
     border-radius: 26px;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    background-color: rgb(27, 27, 27);
+    margin-top: 40px;
+    color: white;
 }
 
-.FP {
+.endereco {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
 
-.PM {
+.ladodireito {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
-#CD, #CC, #BT, #PX {
-    margin-left: 10px;
-}
-
-main {
+.metodopagamento {
     display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 20px;
 }
 
-header {
-    margin-bottom: 10px;
+.detalhespedido {
+    height: 100%;
+    width: 100%;
+    border-radius: 26px;
+    background-color: rgb(103, 103, 103);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+}
+
+input::placeholder {
+    color: rgb(0, 0, 0);
 }
