@@ -1,4 +1,4 @@
-main {
+.main {
     display: flex;
     justify-content: center;
 }
@@ -54,4 +54,18 @@ input {
 
 input::placeholder {
     color: rgb(0, 0, 0);
+}
+.ImgP{
+    width: fit-content;
+    height: fit-content;
+}
+.Info{
+    width: 50%;
+}
+.IMAGE{
+    width: 50%;
+}
+.Product{
+    display: flex;
+    flex-direction: row;
 }

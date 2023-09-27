@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="Compra.css">
 </head>
 
-<body>
+<body onload="ProductDetails()">
     <header class="Pager1">
         <div class="container-fluid">
             <div class="row mt-2">
@@ -43,85 +43,94 @@
         </div>
     </header>
     <main>
-        <!--Lado Esquerdo-->
-        <div class="Pagamento">
-            <div class="endereco">
-                <h3>Endereço</h3>
-                <!--Pais-->
-                <input type="text" name="pais" id="" placeholder="País">
-                <!--Nome-->
-                <input type="text" name="nome" id="" placeholder="Nome">
-                <!--Telefone-->
-                <input type="tel" name="telefone" id="" placeholder="Telefone">
-                <!--CEP-->
-                <input type="text" name="cep" id="" placeholder="CEP">
-                <!--Endereço-->
-                <input type="text" name="endereco" id="" placeholder="Endereço">
-                <!--Numero Residencial-->
-                <input type="text" name="numeroresidencia" id="" placeholder="Número Residencial">
-                <!--Complemento-->
-                <input type="text" name="complemento" id="" placeholder="Complemento">
-                <!--Bairro-->
-                <input type="text" name="bairro" id="" placeholder="Bairro">
-                <!--Cidade-->
-                <input type="text" name="cidade" id="" placeholder="Cidade">
-                <!--Estado-->
-                <input type="text" name="estado" id="" placeholder="Estado">
-            </div>
-            <!--Lado Direito-->
-            <div class="ladodireito">
-                <!--Metodos de Pagamento-->
-                <div class="metodopagamento">
-                    <h3>Método de Pagamento</h3>
-                    <!--Cartao Credito-->
-
-                    <img src="/imagens/pagamentocartao.png" alt="" width="50px">
-                    <span>Cartão de Crédito</span>
-                    <input type="radio">
-
-                    <hr color="white" width="100%">
-                    <!--Cartao Debito-->
-
-                    <img src="/imagens/pagamentocartao.png" alt="" width="50px">
-                    <span>Cartão de Débito</span>
-                    <input type="radio" name="" id="">
-
-                    <hr color="white" width="100%">
-                    <!--Pix-->
-
-                    <img src="/imagens/pagamentopix.png" alt="" width="50px">
-                    <span>Pix</span>
-                    <input type="radio" name="" id="">
-
-                    <hr color="white" width="100%">
-                    <!--Boleto-->
-
-                    <img src="/imagens/pagamentoboleto.png" alt="" width="50px">
-                    <span>Boleto</span>
-                    <input type="radio" name="" id="">
-
+        <!-- Formulario de pagamento -->
+        <form class="main" onsubmit="PaymentInformations()">
+            <!--Lado Esquerdo-->
+            <div class="Pagamento">
+                <div class="endereco">
+                    <h3>Endereço</h3>
+                    <!--Pais-->
+                    <input type="text" name="pais" id="pais" placeholder="País" required>
+                    <!--Nome-->
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <!--Telefone-->
+                    <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
+                    <!--CEP-->
+                    <input type="text" name="cep" id="" placeholder="CEP" required>
+                    <!--Endereço-->
+                    <input type="text" name="endereco" id="" placeholder="Endereço" required>
+                    <!--Numero Residencial-->
+                    <input type="text" name="numeroresidencia" id="" placeholder="Número Residencial" required>
+                    <!--Complemento-->
+                    <input type="text" name="complemento" id="" placeholder="Complemento">
+                    <!--Bairro-->
+                    <input type="text" name="bairro" id="" placeholder="Bairro" required>
+                    <!--Cidade-->
+                    <input type="text" name="cidade" id="" placeholder="Cidade" required>
+                    <!--Estado-->
+                    <input type="text" name="estado" id="" placeholder="Estado" required>
                 </div>
+                <!--Lado Direito-->
+                <div class="ladodireito">
+                    <!--Metodos de Pagamento-->
+                    <div class="metodopagamento">
+                        <h3>Método de Pagamento</h3>
+                        <!--Cartao Credito-->
 
-                <!--Detalhes do Pedido-->
-                <div class="detalhespedido">
-                    <img alt="Imagem Produto" class="ImgP" id="im">
-                    <p class="titulo" id="titl"></p>
-                    <div>
-                        <p class="estrelas" id="Est"></p>
-                    </div>
-                    <p id="count">Votos: indisponivel</p>
-                    <p class="gen" id="gen">Generos: Informação indisponivel</p>
-                    <p class="ye" id="ye">Ano de lançamento: Informação indisponivel</p>
-                    <p id="brand">Informação indisponivel</p>
-                    <p id="preco" alt="Preço">Informação indisponivel</p>
+                        <label for="CC"><img src="/imagens/pagamentocartao.png" alt="" width="50px"></label>
+                        <label for="CC"><span>Cartão de Crédito</span></label>
+                        <input type="radio" name="FormasPagamento" id="CC" value="1" required>
 
-                    <div class="desc">
-                        <p class="description" id="descr" alt="descrição"></p>
+                        <hr color="white" width="100%">
+                        <!--Cartao Debito-->
+
+                        <label for="CD"><img src="/imagens/pagamentocartao.png" alt="" width="50px"></label>
+                        <Label for="CD"><span>Cartão de Débito</span></Label>
+                        <input type="radio" name="FormasPagamento" id="CD" value="2" required>
+
+                        <hr color="white" width="100%">
+                        <!--Pix-->
+
+                        <label for="PX"><img src="/imagens/pagamentopix.png" alt="" width="50px"></label>
+                        <label for="PX"><span>Pix</span></label>
+                        <input type="radio" name="FormasPagamento" id="PX" value="3" required>
+
+                        <hr color="white" width="100%">
+                        <!--Boleto-->
+
+                        <label for="BT"><img src="/imagens/pagamentoboleto.png" alt="" width="50px"></label>
+                        <label for="BT"><span>Boleto</span></label>
+                        <input type="radio" name="FormasPagamento" id="BT" value="4" required>
+
                     </div>
-                    <button>Confirmar Pedido</button>
+
+                    <!--Detalhes do Pedido-->
+                    <div class="detalhespedido">
+                        <div class="Product">
+                            <div class="IMAGE">
+                                <img alt="Imagem Produto" class="ImgP" id="im">
+                            </div>
+                            <div class="Info">
+                                <p class="titulo" id="titl"></p>
+                                <div>
+                                    <p class="estrelas" id="Est"></p>
+                                </div>
+                                <p id="count">Votos: indisponivel</p>
+                                <p class="gen" id="gen">Generos: Informação indisponivel</p>
+                                <p class="ye" id="ye">Ano de lançamento: Informação indisponivel</p>
+                                <p id="brand">Informação indisponivel</p>
+                                <p id="preco" alt="Preço">Informação indisponivel</p>
+
+                                <div class="desc">
+                                    <p class="description" id="descr" alt="descrição"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit">Confirmar Pedido</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
     <script src="/detalhes/detail.js"></script>
     <script src="/Geral/carin.js"></script>
