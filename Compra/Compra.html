@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento</title>
     <link rel="icon" type="image/png" href="/imagens/imagem logo.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/Geral/headers and pagers.css">
     <link rel="stylesheet" href="Compra.css">
 </head>
 
-<body onload="ProductDetails()">
+<body onload="BuyingProducts()">
     <header class="Pager1">
         <div class="container-fluid">
             <div class="row mt-2">
@@ -56,19 +55,19 @@
                     <!--Telefone-->
                     <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required>
                     <!--CEP-->
-                    <input type="text" name="cep" id="" placeholder="CEP" required>
+                    <input type="text" name="cep" id="cep" placeholder="CEP" required>
                     <!--Endereço-->
-                    <input type="text" name="endereco" id="" placeholder="Endereço" required>
+                    <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
                     <!--Numero Residencial-->
-                    <input type="text" name="numeroresidencia" id="" placeholder="Número Residencial" required>
+                    <input type="text" name="numeroresidencia" id="numeroresidencia" placeholder="Número Residencial" required>
                     <!--Complemento-->
-                    <input type="text" name="complemento" id="" placeholder="Complemento">
+                    <input type="text" name="complemento" id="complemento" placeholder="Complemento">
                     <!--Bairro-->
-                    <input type="text" name="bairro" id="" placeholder="Bairro" required>
+                    <input type="text" name="bairro" id="bairro" placeholder="Bairro" required>
                     <!--Cidade-->
-                    <input type="text" name="cidade" id="" placeholder="Cidade" required>
+                    <input type="text" name="cidade" id="cidade" placeholder="Cidade" required>
                     <!--Estado-->
-                    <input type="text" name="estado" id="" placeholder="Estado" required>
+                    <input type="text" name="estado" id="estado" placeholder="Estado" required>
                 </div>
                 <!--Lado Direito-->
                 <div class="ladodireito">
@@ -93,7 +92,7 @@
 
                         <label for="PX"><img src="/imagens/pagamentopix.png" alt="" width="50px"></label>
                         <label for="PX"><span>Pix</span></label>
-                        <input type="radio" name="FormasPagamento" id="PX" value="3" required>
+                        <input type="radio" name="FormasPagamento" id="PX" onchange="PaymentInformations()" value="3" required>
 
                         <hr color="white" width="100%">
                         <!--Boleto-->
@@ -106,26 +105,22 @@
 
                     <!--Detalhes do Pedido-->
                     <div class="detalhespedido">
-                        <div class="Product">
-                            <div class="IMAGE">
-                                <img alt="Imagem Produto" class="ImgP" id="im">
-                            </div>
-                            <div class="Info">
-                                <p class="titulo" id="titl"></p>
-                                <div>
-                                    <p class="estrelas" id="Est"></p>
+                        <div id="carossa">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators" id="cInd"></div>
+                                <div class="carousel-inner" id="cIns">
+                                    
                                 </div>
-                                <p id="count">Votos: indisponivel</p>
-                                <p class="gen" id="gen">Generos: Informação indisponivel</p>
-                                <p class="ye" id="ye">Ano de lançamento: Informação indisponivel</p>
-                                <p id="brand">Informação indisponivel</p>
-                                <p id="preco" alt="Preço">Informação indisponivel</p>
-
-                                <div class="desc">
-                                    <p class="description" id="descr" alt="descrição"></p>
-                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                        </div>
+                        </div>                        
                         <button type="submit">Confirmar Pedido</button>
                     </div>
                 </div>
@@ -136,6 +131,7 @@
     <script src="/Geral/carin.js"></script>
     <script src="/Geral/cadastro e login.js"></script>
     <script src="Compra.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>

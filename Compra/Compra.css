@@ -69,3 +69,42 @@ input::placeholder {
     display: flex;
     flex-direction: row;
 }
+.description{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 170px;
+}
+
+@media (max-width: 1600px){
+    .ImgP{
+        width: 75%;
+    }
+}
+@media (max-width: 1200px){
+    .Info{
+        font-size: smaller;
+    }
+}
+@media (max-width: 800px){
+    .Info{
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 500px){
+    .Product{
+        flex-direction: column;
+    }
+    .IMAGE{
+        width: 100%;
+    }
+    .Info{
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px){
+    .Info{
+        font-size: xx-small;
+    }
+}

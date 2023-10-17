@@ -155,3 +155,9 @@ async function prenCar(cartItems2) {
 
   PFContainer.textContent = `Preço final: R$${precoF.toFixed(2)}`;
 }
+
+
+function send(){
+  localStorage.setItem('PaymentItens', localStorage.getItem('DE'));
+  window.location.href= "/Compra/Compra.html"
+}
