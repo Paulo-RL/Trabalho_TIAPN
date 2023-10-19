@@ -98,28 +98,28 @@ html{
         position: absolute;
         top: 16%;
         left: 20%;
-        font-size: 60px;
+        font-size: 72px;
     }
     .estrelas{
         position: absolute;
-        top: 30%;
+        top: 23%;
         left: 20%;
-        font-size: xx-large;
+        font-size: 45px;
     }
     #count{
         position: absolute;
-        top: 31%;
-        left: 28%;
+        top: 25%;
+        left: 30%;
         opacity: 50%;
-        font-size: x-large;
+        font-size: xx-large;
     }
     #Carin{
         position: absolute;
-        left: 85%;
+        left: 81%;
         top: 55%;
-        width: 20rem;
-        height: 2rem;
-        font-size: x-large;
+        width: 27rem;
+        height: 5rem;
+        font-size: 37px;
         background-color: whitesmoke;
         color: blue;
         border-color: blueviolet;
@@ -127,17 +127,17 @@ html{
     }
     #Carin:hover{
         font-weight: 900;
-        font-size: larger;
-        left: 84.4%;
+        font-size: 34px;
+        left: 80.4%;
         color: blueviolet;
         background-color: blue;
         border-color: red;
-        width: 21rem;
-        height: 2rem;
+        width: 28rem;
+        height: 5rem;
     }
     .ImgP{
-        max-width: fit-content;
-        min-height: 25rem;
+        max-width: auto;
+        min-height: 39rem;
         max-height: 22rem;
         position: absolute;
         left: 1%;
@@ -155,18 +155,19 @@ html{
         margin-left: 30px;
         margin-right: 30px;
         font-weight: 550;
+        font-size: 37px;
     }
     #brand{
         position: absolute;
-        top: 35%;
+        top: 42%;
         left: 20%;
-        font-size: x-large;
+        font-size: 3rem;
     }
     #preco{
         position: absolute;
         top: 50%;
         right: 20%;
-        font-size: xx-large;
+        font-size: 62px;
     }
     .gen{
         min-width: 11.5%;
@@ -175,7 +176,7 @@ html{
         position: absolute;
         top: 50%;
         left: 20%;
-        font-size: xx-large;
+        font-size: 47px;
     }
     .ye{
         min-width: 9.5%;
@@ -184,7 +185,7 @@ html{
         position: absolute;
         top: 53%;
         left: 20%;
-        font-size: xx-large;
+        font-size: 47px;
     }
 }
 @media(max-width:1500px){
@@ -255,19 +256,19 @@ html{
 @media(max-width:1200px){
     .titulo{
         position: absolute;
-        top: 18%;
+        top: 28%;
         left: 20%;
         font-size: 20px;
     }
     .estrelas{
         position: absolute;
-        top: 24%;
+        top: 34%;
         left: 20%;
         font-size: larger;
     }
     #count{
         position: absolute;
-        top: 25%;
+        top: 35%;
         left: 32%;
         opacity: 50%;
         font-size: large;
@@ -300,7 +301,7 @@ html{
         max-height:8rem;
         position: absolute;
         left: 1%;
-        top: 20%;
+        top: 30%;
     }
     .desc{
         position: absolute;
@@ -318,7 +319,7 @@ html{
     }
     #brand{
         position: absolute;
-        top: 30%;
+        top: 40%;
         left: 20%;
         font-size: large;
     }
@@ -449,19 +450,19 @@ html{
 @media(max-width:800px){
     .titulo{
         position: absolute;
-        top: 18%;
+        top: 30%;
         left: 20%;
         font-size: 20px;
     }
     .estrelas{
         position: absolute;
-        top: 25%;
+        top: 36%;
         left: 20%;
         font-size: small;
     }
     #count{
         position: absolute;
-        top: 25%;
+        top: 36%;
         left: 30%;
         opacity: 50%;
         font-size: small;
@@ -490,11 +491,11 @@ html{
     }
     .ImgP{
         max-width: fit-content;
-        min-height: 11rem;
+        min-height: 10rem;
         max-height:8rem;
         position: absolute;
         left: 1%;
-        top: 20%;
+        top: 32%;
     }
     .desc{
         position: absolute;
@@ -507,12 +508,12 @@ html{
     .description{
         margin-left: 30px;
         margin-right: 30px;
-        font-size:x-small;
+        font-size:small;
         font-weight: 550;
     }
     #brand{
         position: absolute;
-        top: 30%;
+        top: 44%;
         left: 20%;
         font-size: medium;
     }
@@ -681,7 +682,7 @@ html{
         height: 1.7rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 6rem;
         max-height:2rem;
         position: absolute;
@@ -712,16 +713,16 @@ html{
     }
     .estrelas{
         position: absolute;
-        top: 23%;
-        left: 28%;
-        font-size: 6px;
+        top: 22%;
+        left: 25%;
+        font-size: 8px;
     }
     #count{
         position: absolute;
-        top: 24%;
-        left: 31%;
+        top: 22%;
+        left: 39%;
         opacity: 50%;
-        font-size: smaller;
+        font-size: 8px;
     }
     #Carin{
         position: absolute;
@@ -764,7 +765,7 @@ html{
     .description{
         margin-left: 30px;
         margin-right: 30px;
-        font-size:5px;
+        font-size:9px;
         font-weight: 400;
     }
 }

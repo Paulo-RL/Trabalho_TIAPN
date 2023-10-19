@@ -11,15 +11,17 @@
     <link rel="icon" type="image/png" href="/imagens/imagem logo.png"/>
 </head>
 <body  id="main" onload="pes2();hide();pageLoad()">
-    <div class="CC" id="CC">
-        <img src="/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
-        <div class="CarinCont" id="CarinCont">
-        </div>
-        <div class="CartFooter">
-          <p class="PF" id="PrecoFinal"></p>
-          <div class="OI" id="OutrosItens"></div>
-        </div>
-      </div>
+  <div class="CC" id="CC">
+    <img src="/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+    <div class="CarinCont" id="CarinCont">
+    </div>
+    <div class="CartFooter">
+      <p class="PF" id="PrecoFinal"></p>
+      <button type="submit" class="Pagar" onclick="send()">Pagar</button>
+      <div class="OI" id="OutrosItens"></div>
+      <div class="barraBaixo"></div>
+    </div>
+  </div>
     <header class="header2">
         <a href="javascript:void(0)" onClick="history.go(-1); return false;">
         <img class="setaVolt" src="/imagens/voltar.png" alt="seta para volar para pagina principal">
@@ -29,7 +31,7 @@
         </a>
         <div class="BrPesq">
             <p class="textPq">Pesquisa</p>
-            <input type="text" class="barraP" id="bPp">
+            <input type="text" placeholder="Pesquisar" class="barraP" id="bPp">
             <button type="button" class="butP" onclick="pes2()">Pesquisa</button>
         </div>
         <div class="contCAR2">

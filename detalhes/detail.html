@@ -13,14 +13,16 @@
 </head>
 <body onload="detail();pageLoad()">
     <div class="CC" id="CC">
-        <img src="/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
-        <div class="CarinCont" id="CarinCont">
-        </div>
-        <div class="CartFooter">
-          <p class="PF" id="PrecoFinal"></p>
-          <div class="OI" id="OutrosItens"></div>
-        </div>
+      <img src="/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+      <div class="CarinCont" id="CarinCont">
       </div>
+      <div class="CartFooter">
+        <p class="PF" id="PrecoFinal"></p>
+        <button type="submit" class="Pagar" onclick="send()">Pagar</button>
+        <div class="OI" id="OutrosItens"></div>
+        <div class="barraBaixo"></div>
+      </div>
+    </div>
       
     <header class="header2">
         <a href="javascript:void(0)" onClick="history.go(-1); return false;">
@@ -31,7 +33,7 @@
         </a>
         <form class="BrPesq" action="/pesquisa/Search.html" role="search" onchange="pes4()">
             <p class="textPq">Pesquisa</p>
-            <input type="text" class="barraP" id="detP">
+            <input placeholder="Pesquisar" type="text" class="barraP" id="detP">
             <button type="submit" class="butP" onclick="pes4()">Pesquisa</button>
         </form>
         <div class="contCAR2">

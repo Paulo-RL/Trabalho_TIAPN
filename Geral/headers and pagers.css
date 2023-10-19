@@ -87,7 +87,7 @@ max-height: fit-content;
   filter: invert();
 }
 .carrinho {
-  width: fit-content;
+  width: auto;
   height: 50px;
 }
 
@@ -99,8 +99,8 @@ max-height: fit-content;
 max-height: 13%;
 }
 .Logo {
-max-width: 5%;
-left: 7%;
+  max-width: 100%;
+  height: auto;
 }
 .BrPesq{
   position: relative;
@@ -110,11 +110,13 @@ left: 7%;
 font-size: 30px;
 }
 .butP {
-min-height: fit-content;
+min-height: auto;
 font-size: large;
 }
 .carrinho {
 right: -60%;
+  width: auto;
+  height: 82px;
 }
 .textoCarrinho {
 font-size: X-large;

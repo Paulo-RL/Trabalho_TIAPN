@@ -73,7 +73,7 @@ function Body(){
         document.getElementById('FB').style.visibility="hidden"
         document.getElementById('MB').innerHTML=`
         <div class="container-fluid">
-        <div class="row">
+        <div class="row FAQ">
             <div class="col-11">
                 <h1>Serviço de atendimento ao Consumidor</h1>
                 <br>

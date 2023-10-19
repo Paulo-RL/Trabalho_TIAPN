@@ -118,7 +118,20 @@
   -webkit-text-stroke-color: gold;
   color: black;
 }
-
+.barraBaixo{
+  width: 100px;
+  height: 14px;
+  color: black;
+}
+.Pagar{
+  position: relative;
+  left: 80%;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: transparent;
+  color: yellow;
+  border-color: yellowgreen;
+}
 @media (min-width: 2000px) {
   .CC {
     width: 30%;
@@ -184,6 +197,10 @@
 @media (max-width: 912px) {
   .CC {
     background-color: rgba(3, 85, 85, 0.9);
+    width: 37vw;
+  }
+  .Pagar{
+    left: 65%;
   }
   .recari {
     font-size: xx-small;
