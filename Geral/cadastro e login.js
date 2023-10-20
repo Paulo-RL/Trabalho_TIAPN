@@ -63,6 +63,25 @@ function OpenLog2() {
             </div>
             <button type="submit" class="IBL">Login</button>
         </form>
+        <div class="RecuperarSenha">
+            <button class="EsqueceuSenha" onclick="RecuperarSenha()">Esqueceu senha</button>
+        </div>
+    </div>`;
+}
+
+function OpenRecSenha(userIndex){
+  document.getElementById('LC').innerHTML = `
+    <img src="/imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
+    <div>
+        <p class="LCT">Alterar senha</p>
+
+        <form class="FLC" onsubmit="event.preventDefault(); AlterarSenha(${userIndex})">
+            <div  class="IPSL">
+                Digite a nova senha:
+                <input placeholder="Nova senha" type="password" id="NovaSenha">
+            </div>
+            <button type="submit" class="IBL">Alterar senha</button>
+        </form>
     </div>`;
 }
 
@@ -391,6 +410,27 @@ function LO() {
       <button type="button" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close" onclick="OpenLog()">Login</button>
 `;
   }
+}
+function RecuperarSenha(){
+  const Email = document.getElementById('IEML').value;
+  if (!Email) {
+    displayErrorMessage("Por favor, preencha o campo e-mail");
+    return;
+  }
+  const userIndex = userList.findIndex(user => (
+    user.email === Email
+  ));
+  OpenRecSenha(userIndex);
+}
+function AlterarSenha(userIndex){
+  const Senha = document.getElementById('NovaSenha').value;
+  if (!Senha) {
+    displayErrorMessage("Por favor, escreva a nova senha");
+    return;
+  }
+  userList[userIndex].password=Senha;
+  localStorage.setItem('userList', JSON.stringify(userList));
+  OpenLog2();
 }
 /* const Delete = 0;
 if (Delete >= 0 && Delete < userList.length) {

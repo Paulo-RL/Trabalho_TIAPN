@@ -135,6 +135,14 @@ button.nav-link:hover{
     top: 5%;
     font-size: large;
 }
+.EsqueceuSenha{
+    border-style: none;
+    text-decoration: underline;
+    color: blue;
+}
+.EsqueceuSenha:hover{
+    color: darkblue;
+}
 @media screen and (min-width: 2000px) {
     .IEML{
         font-size: xx-large;
@@ -239,7 +247,7 @@ button.nav-link:hover{
 }
 .IP{
     position: absolute;
-    width: fit-content;
+    width: auto;
     height: 24vh;
     left: 35%;
     top: 15%;
