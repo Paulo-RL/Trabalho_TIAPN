@@ -231,7 +231,7 @@ html{
         height: 2.3rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 20rem;
         max-height: 22rem;
         position: absolute;
@@ -296,7 +296,7 @@ html{
         height: 2.3rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 14rem;
         max-height:8rem;
         position: absolute;
@@ -392,7 +392,7 @@ html{
         height: 1.7rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 11rem;
         max-height:8rem;
         position: absolute;
@@ -490,7 +490,7 @@ html{
         height: 1.7rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 10rem;
         max-height:8rem;
         position: absolute;
@@ -587,7 +587,7 @@ html{
         height: 1.7rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 8rem;
         max-height:2rem;
         position: absolute;
@@ -747,7 +747,7 @@ html{
         height: 1.7rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 6rem;
         max-height:2rem;
         position: absolute;
@@ -812,7 +812,7 @@ html{
         height: 1.7rem;
     }
     .ImgP{
-        max-width: fit-content;
+        max-width: auto;
         min-height: 6rem;
         max-height:2rem;
         position: absolute;
