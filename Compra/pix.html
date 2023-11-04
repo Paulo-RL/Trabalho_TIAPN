@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Página de Pagamento</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+    <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+      <span class="material-icons">home</span>
+    </button>
+    <h1 class="navbar-title">Home</h1>
+    <nav class="navbar-menu">
+      <input
+          type="text"
+          id="search"
+          placeholder="Pesquisar..."
+          <button type="button" id="search-button"><i class="fas fa-search"></i></button>
+    </nav>
+    </nav>
+  </nav>
+  <div class="container">
+    <div class="image">
+      <section class="header">
+        <h2>
+      </section>
+    </div>
+    <form id="form" class="form form-boleto">
+      <div class="form-content">
+        <img src="/Compra/imagens/pix.png" alt="" width="70" height="50">
+        <section class="header">
+          <h2>Pague agora utilizando o pix!</h2>
+        </section>
+        <button type="button" id="gerarPixBtn" class="custom-button">Copiar chave pix</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div class="row">
+      <p class="text-center" id="CoP">Copyright 2023 Biblioteca Otaku - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="boleto.js"></script>
+</body>
+</html>
+

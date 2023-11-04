@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <title>Página de Pagamento</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+    <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+      <i class="fas fa-home"></i> 
+    </button>
+    <h1 class="navbar-title">Home</h1>
+    <nav class="navbar-menu">
+      <div class="navbar-search">
+        <!-- Adicione o input de pesquisa aqui -->
+        <input
+          type="text"
+          id="search"
+          placeholder="Pesquisar..."
+          <button type="button" id="search-button"><i class="fas fa-search"></i></button>
+        
+
+    </nav>
+  </nav>
+  <div class="container">
+    <div class="image">
+      <img src="/Compra/imagens/Screenshot_1.png" alt="" width="500" height="60">
+      <section class="header">
+        <h2>Escreva as informações do cartão de crédito:</h2>
+      </section>
+    </div>
+
+    <form id="form" class="form">
+      <div class="form-content">
+        <label for="name">Nome: </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Digite o nome..."
+        />
+      </div>
+
+      <div class="form-content">
+        <label for="cartao">Número do cartão:</label>
+        <input
+          type="text"
+          id="cartao"
+          placeholder="Digite o Número do cartão..."
+        />
+      </div>
+
+      <div class="form-content">
+        <label for="validade">Digite a validade:</label>
+        <input
+          type="text"
+          id="validade"
+          placeholder="Digite a validade..."
+        />
+      </div>
+      <div class="form-content">
+        <label for="cvv">Digite o CVV:</label>
+        <input
+          type="text"
+          id="cvv"
+          placeholder="Digite o CVV..."
+        />
+      </div>
+
+      <div class="form-content">
+        <label for="parcelamento">Opção de Parcelamento:</label>
+        <select id="parcelamento">
+          <option value="1">À vista</option>
+          <option value="2">2x</option>
+          <option value="3">3x</option>
+          <option value="4">4x</option>
+          <option value="5">5x</option>
+        </select>
+      </div>
+
+      <button type="submit">Confirmar pagamento</button>
+    </form> 
+  </div>
+  
+  <script src="./scripts.js"></script>
+</body>
+</html>

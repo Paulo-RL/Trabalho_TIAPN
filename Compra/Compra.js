@@ -36,7 +36,7 @@ function stCount(rate) {
   return stars;
 }
 /* Função para pegar as informações do pagamento */
-function PaymentInformations(){
+function PaymentInformations() {
   const PAIS = document.getElementById("pais").value;
   const NOME = document.getElementById("nome").value;
   const TELEFONE = document.getElementById("telefone").value;
@@ -47,14 +47,35 @@ function PaymentInformations(){
   const BAIRRO = document.getElementById("bairro").value;
   const CIDADE = document.getElementById("cidade").value;
   const ESTADO = document.getElementById("estado").value;
-  const PAYMET = document.getElementsByName("FormasPagamento");
-  var escolhido;
-  for (let i = 0; i < PAYMET.length; i++) {
-    if(PAYMET[i].checked){
-      escolhido = PAYMET[i].value;
-    }   
+  const PAYMENT = document.querySelector('input[name="FormasPagamento"]:checked');
+
+  if (PAYMENT) {
+    var escolhido = PAYMENT.value;
+    console.log(escolhido);
+    redirecionarPagina(escolhido);
+    console.log(PAIS, NOME, TELEFONE, CEP, ENDERECO, NUMERO_RESIDENCIA, COMPLEMENTO, BAIRRO, CIDADE, ESTADO, escolhido);
+  } else {
+    alert('Selecione uma forma de pagamento.');
   }
-  console.log(PAIS, NOME, TELEFONE, CEP, ENDERECO, NUMERO_RESIDENCIA, COMPLEMENTO, BAIRRO, CIDADE, ESTADO, escolhido);
+}
+
+function redirecionarPagina(valor) {
+  switch (valor) {
+    case "1":
+      window.location.href = 'Credito.html';
+      break;
+    case "2":
+      window.location.href = 'debito.html';
+      break;
+    case "3":
+      window.location.href = 'pix.html';
+      break;
+    case "4":
+      window.location.href = 'boleto.html';
+      break;
+    default:
+      alert('Valor inválido. Escolha um valor de 1 a 4.');
+  }
 }
 
 
