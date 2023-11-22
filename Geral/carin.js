@@ -83,6 +83,40 @@ function togCar() {
   document.getElementById('CC').classList.toggle('active');
 }
 
+async function addItemToCart(userId, itemId) {
+  const response = await fetch('/cart_operations.php', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          action: 'addItemToCart',
+          userId: userId,
+          itemId: itemId,
+      }),
+  });
+  const result = await response.json();
+
+  return result.success;
+}
+
+async function removeItemFromCart(userId, itemId) {
+  const response = await fetch('/cart_operations.php', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          action: 'removeItemFromCart',
+          userId: userId,
+          itemId: itemId,
+      }),
+  });
+  const result = await response.json();
+
+  return result.success;
+}
+
 function pageSave(existingItems, preItems) {
   let cartItems = existingItems.length > 0 ? existingItems : preItems;
   const loggedInUserIndex = getLoggedInUserIndex();
@@ -126,7 +160,7 @@ async function prenCar(cartItems2) {
   }
 
   const limitedItems = cartItems.slice(0, 4);
-
+  var userI = getLoggedInUserIndex()
   for (const itemID of limitedItems) {
     const item = await fetchItemDetails(itemID);
     cari.innerHTML += `
@@ -134,7 +168,7 @@ async function prenCar(cartItems2) {
         <img src="${item.image}" class="imCari">
         <p class="ticari">${item.title}</p>
         <p class="pecari">R$${parseFloat(item.price).toFixed(2)}</p>
-        <button class="recari" onclick="removerItem('${item.id}')">Remover produto</button>
+        <button class="recari" onclick="removeItemFromCart('${userI ,item.id}')">Remover produto</button>
       </div>
     `;
     precoF += parseFloat(item.price);

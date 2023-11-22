@@ -41,7 +41,7 @@ async function pes2() {
   if (p) {
     document.getElementById('bPp').value = p;
     const vem = document.getElementById('bPp').value;
-    const baseResponse = await fetch('/base.json');
+    const baseResponse = await fetch('/api/products');
     const base = await baseResponse.json();
     const produtos = base.itens;
     const resultados = buscarPorLetras(vem, produtos);
@@ -60,7 +60,7 @@ async function pes2() {
       pes3();
     }
     else if(CSSTEST){
-      const baseResponse = await fetch('/base.json');
+      const baseResponse = await fetch('/api/products');
       const base = await baseResponse.json();
       const produtos = base.itens;
       const ADMProds= produtos.slice(0, 11)
@@ -71,7 +71,7 @@ async function pes2() {
 
 async function pes3() {
   const vem = document.getElementById('bPp').value;
-  const response = await fetch('/base.json');
+  const response = await fetch('/api/products');
   const base = await response.json();
   const produtos = base.itens;
   const resultados = buscarPorLetras(vem, produtos);

@@ -122,37 +122,35 @@ function CADSAV() {
   const Tel = document.getElementById('ITL').value;
   const Email = document.getElementById('IEML').value;
   const Password = document.getElementById('IPSL').value;
-  const status=2;
+  const Status = 2;
 
-  if (!Name || !Tel || !Email || !Password) {
-    displayErrorMessage("Por favor, preencha todos os campos");
-    return;
-  }
-
-  const userInfo = {
-    name: Name,
-    telephone: Tel,
-    email: Email,
-    password: Password,
-    status: status
-  };
-
-  const isDuplicate = userList.some(user => (
-    user.name === Name &&
-    user.email === Email
-  ));
-
-  if (isDuplicate) {
-    displayErrorMessage("Usuário já cadastrado");
-    return;
-  }
-
-  userList.push(userInfo);
-  localStorage.setItem('userList', JSON.stringify(userList));
+  // Replace the local storage operation with a server request
+  fetch('/user_operations.php', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          action: 'addUser',
+          name: Name,
+          telephone: Tel,
+          email: Email,
+          password: Password,
+          status: Status,
+      }),
+  })
+  .then(response => response.json())
+  .then(data => {
+      // Handle the response, e.g., display success message, etc.
+      console.log(data);
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
 
   LOG();
-  OpenBox();
 }
+
 
 var userName = '';
 var userTel = '';
@@ -164,32 +162,47 @@ function LOG() {
   const Email = document.getElementById('IEML').value;
   const Password = document.getElementById('IPSL').value;
 
-  if (!Email || !Password) {
-    displayErrorMessage("Por favor, preencha todos os campos");
-    return;
-  }
+  fetch('/user_operations.php', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+          action: 'getUserByEmailAndPassword',
+          email: Email,
+          password: Password,
+      }),
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data) {
+          // Successful login
+          userName = data.name;
+          userTel = data.telephone;
+          userEm = data.email;
+          userSt = data.status;
+          Login = true;
 
-  const userIndex = userList.findIndex(user => (
-    user.password === Password &&
-    user.email === Email
-  ));
+          localStorage.setItem('LoggedInUser', JSON.stringify({
+              index: data.id,  // Assuming there's an 'id' field in the users table
+              name: userName,
+              telephone: userTel,
+              email: userEm,
+              status: userSt
+          }));
 
-  if (userIndex === -1) {
-    displayErrorMessage("Login inválido");
-    return;
-  }
-
-  userName = userList[userIndex].name;
-  userTel = userList[userIndex].telephone;
-  userEm = userList[userIndex].email;
-  userSt= userList[userIndex].status;
-  Login = true;
-  localStorage.setItem('LoggedInUser', JSON.stringify({ index: userIndex, name: userName, telephone: userTel, email: userEm, status: userSt}));
-  localStorage.setItem('CSSPESQ', 'false');
-  location.reload()
-  LO()
+          localStorage.setItem('CSSPESQ', 'false');
+          location.reload();
+          LO();
+      } else {
+          // Invalid login
+          displayErrorMessage("Login inválido");
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
 }
-
 function displayErrorMessage(message) {
   const LogCad = document.getElementById('LC');
   if (!LogCad) {
