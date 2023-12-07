@@ -6,18 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MangáFlix</title>
-  <link rel="icon" type="image/png" href="/imagens/imagem logo.png" />
+  <link rel="icon" type="image/png" href="../imagens/imagem logo.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./bib.css">
-  <link rel="stylesheet" href="/Geral/carin.css">
-  <link rel="stylesheet" href="/Geral/headers and pagers.css">
-  <link rel="stylesheet" href="/Geral/cadastro e login.css">
-  <script src="./bib.js"></script>
-  <script src="/Geral/carin.js"></script>
-  <script src="/Geral/cadastro e login.js"></script>
+  <link rel="stylesheet" href="bib.css">
+  <link rel="stylesheet" href="../Geral/carin.css">
+  <link rel="stylesheet" href="../Geral/headers and pagers.css">
+  <link rel="stylesheet" href="../Geral/cadastro e login.css">
+  <script src="bib.js"></script>
+  <script src="../Geral/carin.js"></script>
+  <script src="../Geral/cadastro e login.js"></script>
 </head>
 
 <body onload="loadCard();pageLoad();LO()">
@@ -122,8 +122,8 @@
                 <nav class="navbar bg-body-dark">
                     <div class="container-fluid">
                         <div class="col-2 col-2">
-                            <a href="/index.html">
-                              <img src="/imagens/imagem logo.png"  id="imagemLogo" alt="logo da pagina">
+                            <a href="../index.html">
+                              <img src="../imagens/imagem logo.png"  id="imagemLogo" alt="logo da pagina">
                             </a>  
                             <p class="Welcome mt-3">Bem vindo à nossa loja!</p>
                         </div>
@@ -153,16 +153,16 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 col-md-8" id="carPesq">
-                            <form class="d-flex" action="/pesquisa/Search.html" role="search" onchange="pes()">
+                            <form class="d-flex" action="../pesquisa/Search.html" role="search" onchange="pes()">
                                 <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
                                 <button class="btn btn-outline-danger" type="submit" onclick="pes()" id="searchButton">Buscar</button>
                             </form>
                             <div class="contCAR">
                                 <div class="">
-                                    <img src="img/icons8-shopping-cart-96.png" id="carrinho" onclick="togCar()" alt="">
+                                    <img src="../img/icons8-shopping-cart-96.png" id="carrinho" onclick="togCar()" alt="">
                                 </div>
                                 <div class="CC" id="CC">
-                                    <img src="/imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+                                    <img src="../imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
                                     <div class="CarinCont" id="CarinCont">
 
                                     </div>

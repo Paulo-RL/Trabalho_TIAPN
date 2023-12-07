@@ -11,7 +11,7 @@ function filtro() {
 }
 
 async function ler(filtro = "", filtro2 = "", filtro3 = "", filtro4 = "") {
-  const response = await fetch('/base.json');
+  const response = await fetch('../base.json');
   const base = await response.json();
   let produtos = base.itens;
   var letra = filtro4;

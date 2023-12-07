@@ -3,7 +3,7 @@ function pes() {
 }
 
 async function GetProduct(id) {
-  const response = await fetch('/base.json');
+  const response = await fetch('../base.json');
   const base = await response.json();
   var produto = base.itens.find((item) => item.id === parseInt(id));
   return produto;

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento</title>
-    <link rel="icon" type="image/png" href="imagens/imagem logo.png" />
+    <link rel="icon" type="image/png" href="../imagens/imagem logo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Geral/headers and pagers.css">
+    <link rel="stylesheet" href="../Geral/headers and pagers.css">
     <link rel="stylesheet" href="Compra.css">
 </head>
 
@@ -20,8 +20,8 @@
                 <nav class="navbar bg-body-dark">
                     <div class="container-fluid">
                         <div class="col-2 col-2">
-                            <a href="/index.html">
-                                <img src="/imagens/imagem logo.png" id="imagemLogo" alt="logo da pagina">
+                            <a href="../index.html">
+                                <img src="../imagens/imagem logo.png" id="imagemLogo" alt="logo da pagina">
                             </a>
                         </div>
                         <div class="navb">
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-4 col-md-8" id="carPesq">
-                            <form class="d-flex" action="/pesquisa/Search.html" role="search" onchange="pes()">
+                            <form class="d-flex" action="../pesquisa/Search.html" role="search" onchange="pes()">
                                 <input class="form-control me-2" placeholder="Pesquisar" aria-label="Search" id="impPT">
                                 <button class="btn btn-outline-danger" type="submit" onclick="pes()"
                                     id="searchButton">Buscar</button>
@@ -76,28 +76,28 @@
                         <h3>Método de Pagamento</h3>
                         <!--Cartao Credito-->
 
-                        <label for="CC"><img src="/imagens/pagamentocartao.png" alt="" width="50px"></label>
+                        <label for="CC"><img src="../imagens/pagamentocartao.png" alt="" width="50px"></label>
                         <label for="CC"><span>Cartão de Crédito</span></label>
                         <input type="radio" name="FormasPagamento" id="CC" value="1" required>
 
                         <hr color="white" width="100%">
                         <!--Cartao Debito-->
 
-                        <label for="CD"><img src="/imagens/pagamentocartao.png" alt="" width="50px"></label>
+                        <label for="CD"><img src="../imagens/pagamentocartao.png" alt="" width="50px"></label>
                         <Label for="CD"><span>Cartão de Débito</span></Label>
                         <input type="radio" name="FormasPagamento" id="CD" value="2" required>
 
                         <hr color="white" width="100%">
                         <!--Pix-->
 
-                        <label for="PX"><img src="/imagens/pagamentopix.png" alt="" width="50px"></label>
+                        <label for="PX"><img src="../imagens/pagamentopix.png" alt="" width="50px"></label>
                         <label for="PX"><span>Pix</span></label>
                         <input type="radio" name="FormasPagamento" id="PX" value="3" required>
 
                         <hr color="white" width="100%">
                         <!--Boleto-->
 
-                        <label for="BT"><img src="/imagens/pagamentoboleto.png" alt="" width="50px"></label>
+                        <label for="BT"><img src="../imagens/pagamentoboleto.png" alt="" width="50px"></label>
                         <label for="BT"><span>Boleto</span></label>
                         <input type="radio" name="FormasPagamento" id="BT" value="4" required>
 
@@ -127,9 +127,9 @@
             </div>
         </form>
     </main>
-    <script src="/detalhes/detail.js"></script>
-    <script src="/Geral/carin.js"></script>
-    <script src="/Geral/cadastro e login.js"></script>
+    <script src="../detalhes/detail.js"></script>
+    <script src="../Geral/carin.js"></script>
+    <script src="../Geral/cadastro e login.js"></script>
     <script src="Compra.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

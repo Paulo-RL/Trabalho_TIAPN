@@ -1,7 +1,7 @@
 async function detail() {
   const Proid = localStorage.getItem('d');
 
-  const response = await fetch('/base.json');
+  const response = await fetch('../base.json');
   const base = await response.json();
   const produto = base.itens.find((item) => item.id === parseInt(Proid));
 
