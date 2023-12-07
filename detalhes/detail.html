@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="detalhes/detail.css">
-    <link rel="stylesheet" href="Geral/2carin.css">
-    <link rel="stylesheet" href="https://github.com/Paulo-RL/Trabalho_TIAPN/blob/a71a55d09ed6fd72a68a07fc1747b8c515ccb236/Geral/headers%20and%20pagers.css">
+    <link rel="stylesheet" href="../detalhes/detail.css">
+    <link rel="stylesheet" href="../Geral/2carin.css">
+    <link rel="stylesheet" href="../Geral/headers and pagers.css">
     <script src="https://kit.fontawesome.com/4a5bd8164a.js" crossorigin="anonymous"></script>
     <title>MangáFlix</title>
-    <link rel="icon" type="image/png" href="./imagens/imagem logo.png"/>
+    <link rel="icon" type="image/png" href="../imagens/imagem logo.png"/>
 </head>
 <body onload="detail();pageLoad()">
     <div class="CC" id="CC">
-      <img src="./imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+      <img src="../imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
       <div class="CarinCont" id="CarinCont">
       </div>
       <div class="CartFooter">
@@ -26,23 +26,23 @@
       
     <header class="header2">
         <a href="javascript:void(0)" onClick="history.go(-1); return false;">
-        <img class="setaVolt" src="./imagens/voltar.png" alt="seta para volar para pagina principal">
+        <img class="setaVolt" src="../imagens/voltar.png" alt="seta para volar para pagina principal">
         </a>
-        <a href="index.html">
-            <img src="./imagens/imagem logo.png" class="Logo" alt="logo da pagina" height="90px" width="170px" alt="logo">
+        <a href="../index.html">
+            <img src="../imagens/imagem logo.png" class="Logo" alt="logo da pagina" height="90px" width="170px" alt="logo">
         </a>
-        <form class="BrPesq" action="./pesquisa/Search.html" role="search" onchange="pes4()">
+        <form class="BrPesq" action="../pesquisa/Search.html" role="search" onchange="pes4()">
             <p class="textPq">Pesquisa</p>
             <input placeholder="Pesquisar" type="text" class="barraP" id="detP">
             <button type="submit" class="butP" onclick="pes4()">Pesquisa</button>
         </form>
         <div class="contCAR2">
             <div class="top-right">
-              <img src="./imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
+              <img src="../imagens/img.carrinho de compras.png" class="carrinho" alt="carrinho de compras" onclick="togCar()">
               <p class="carText" onclick="togCar()">Meu Carrinho</p>
             </div>
             <div class="CC" id="CC">
-              <img src="./imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
+              <img src="../imagens/close.png" class="clo" alt="Fechar carrinho" onclick="togCar()">
               <div class="CarinCont" id="CarinCont"></div>
               <div class="CartFooter">
                 <p class="PF" id="PrecoFinal"></p>
@@ -64,8 +64,8 @@
         <p class="description" id="descr" alt="descrição"></p>
     </div>
     
-    <script src="detalhes/detail.js"></script>
-    <script src="Geral/carin.js"></script>
-    <script src="Geral/cadastro e login.js"></script>
+    <script src="../detalhes/detail.js"></script>
+    <script src="../Geral/carin.js"></script>
+    <script src="../Geral/cadastro e login.js"></script>
 </body>
 </html>
