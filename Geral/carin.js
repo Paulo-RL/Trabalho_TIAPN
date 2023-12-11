@@ -193,5 +193,5 @@ async function prenCar(cartItems2) {
 
 function send(){
   localStorage.setItem('PaymentItens', localStorage.getItem('DE'));
-  window.location.href= "../Compra/Compra.html"
+  window.location.href= "Trabalho_TIAPN/Compra/Compra.html"
 }
