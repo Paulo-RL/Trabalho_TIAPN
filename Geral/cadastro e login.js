@@ -20,7 +20,7 @@ function OpenBox() {
 
 function OpenCad2() {
   document.getElementById('LC').innerHTML = `
-    <img src="/imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
+    <img src="../imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
     <div>
       <p class="LCT">Cadastro</p>
 
@@ -48,7 +48,7 @@ function OpenCad2() {
 
 function OpenLog2() {
   document.getElementById('LC').innerHTML = `
-    <img src="/imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
+    <img src="../imagens/close.png" id="cl" alt="Fechar login ou cadastro" onclick="OpenBox()">
     <div>
         <p class="LCT">Login</p>
 
